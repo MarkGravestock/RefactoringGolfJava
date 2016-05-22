@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FibonacciIndexer {
-    public FibonacciIndexer() {
-    }
 
     public int findIndexOf(long fibonacci) {
         if (fibonacci >= 0 && fibonacci < 2) {
