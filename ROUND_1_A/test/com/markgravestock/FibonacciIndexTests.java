@@ -38,15 +38,6 @@ public class FibonacciIndexTests {
 		assertEquals(expectedIndex, fibonacciIndexer.findIndexOf(fibonacci));
 	}
 	
-	@Test
-	public void whenNumberNotFoundThenIndexIsMinusOne() {
-		assertEquals(-1, new FibonacciIndexer().findIndexOf(7));
-	}
-	
-	@Test
-	public void cannotFindIndexOfNegativeNumber() {
-		assertEquals(-1, new FibonacciIndexer().findIndexOf(-1));
-	}
 
 
 }
