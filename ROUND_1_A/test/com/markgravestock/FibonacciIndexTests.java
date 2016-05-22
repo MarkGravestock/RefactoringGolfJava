@@ -2,7 +2,6 @@ package com.markgravestock;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,6 +17,7 @@ public class FibonacciIndexTests {
 
 	private final int expectedIndex;
 	private final long fibonacci;
+	private final FibonacciIndexer fibonacciIndexer = new FibonacciIndexer();
 
 
 	public FibonacciIndexTests(int expectedIndex, long fibonacci) {
@@ -35,37 +35,22 @@ public class FibonacciIndexTests {
 
 	@Test
 	public void findsIndexOfFibonacciNumber() {
-		assertEquals(expectedIndex, findIndexOf(fibonacci));
+		assertEquals(expectedIndex, fibonacciIndexer.findIndexOf(fibonacci));
 	}
 	
 	@Test
 	public void whenNumberNotFoundThenIndexIsMinusOne() {
-		assertEquals(-1, findIndexOf(7));
+		assertEquals(-1, fibonacciIndexer.findIndexOf(7));
 	}
 	
 	@Test
 	public void cannotFindIndexOfNegativeNumber() {
-		assertEquals(-1, findIndexOf(-1));
+		assertEquals(-1, fibonacciIndexer.findIndexOf(-1));
 	}
 	
 	private int findIndexOf(long fibonacci) {
-		if(fibonacci >= 0 && fibonacci < 2){
-			return (int)fibonacci;
-		}
-		int indexOfFibonacci = -1;
-		int currentIndex = 2;
-		long f = 0;
-		List<Long> sequence = new ArrayList<Long>();
-		sequence.addAll(Arrays.asList(new Long[]{0L,1L}));
-		while(f < fibonacci){
-			f = sequence.get(currentIndex - 1) + sequence.get(currentIndex - 2);
-			if(f == fibonacci)
-				indexOfFibonacci = currentIndex;
-			sequence.add(f);
-			currentIndex++;
-		}
-	
-		return indexOfFibonacci;
+
+		return fibonacciIndexer.findIndexOf(fibonacci);
 	}
 
 
