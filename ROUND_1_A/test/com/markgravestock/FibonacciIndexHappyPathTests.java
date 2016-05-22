@@ -17,12 +17,13 @@ public class FibonacciIndexHappyPathTests {
 
 	private final int expectedIndex;
 	private final long fibonacci;
-	private final FibonacciIndexer fibonacciIndexer = new FibonacciIndexer();
+	private final FibonacciIndexer indexer;
 
 
 	public FibonacciIndexHappyPathTests(int expectedIndex, long fibonacci) {
 		this.expectedIndex = expectedIndex;
 		this.fibonacci = fibonacci;
+		this.indexer = new FibonacciIndexer();
 	}	
 	
 
@@ -35,7 +36,7 @@ public class FibonacciIndexHappyPathTests {
 
 	@Test
 	public void findsIndexOfFibonacciNumber() {
-		assertEquals(expectedIndex, fibonacciIndexer.findIndexOf(fibonacci));
+		assertEquals(expectedIndex, indexer.findIndexOf(fibonacci));
 	}
 	
 
