@@ -40,12 +40,12 @@ public class FibonacciIndexTests {
 	
 	@Test
 	public void whenNumberNotFoundThenIndexIsMinusOne() {
-		assertEquals(-1, fibonacciIndexer.findIndexOf(7));
+		assertEquals(-1, new FibonacciIndexer().findIndexOf(7));
 	}
 	
 	@Test
 	public void cannotFindIndexOfNegativeNumber() {
-		assertEquals(-1, fibonacciIndexer.findIndexOf(-1));
+		assertEquals(-1, new FibonacciIndexer().findIndexOf(-1));
 	}
 
 
