@@ -47,11 +47,6 @@ public class FibonacciIndexTests {
 	public void cannotFindIndexOfNegativeNumber() {
 		assertEquals(-1, fibonacciIndexer.findIndexOf(-1));
 	}
-	
-	private int findIndexOf(long fibonacci) {
-
-		return fibonacciIndexer.findIndexOf(fibonacci);
-	}
 
 
 }
