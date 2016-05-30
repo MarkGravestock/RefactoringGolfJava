@@ -12,13 +12,18 @@ public class FootballScoreStats {
 		int total = 0;
 		Game[] played =  footballData.getAllPlayed();
 		for (Game game : played) {
-			if(game.getHomeTeam().equals(teamName)){
-				total += game.getHomeTeamScore();
-			}
-			if(game.getAwayTeam().equals(teamName)){
-				total += game.getAwayTeamScore();
-			}
+			total = getScoreForTeam(teamName, total, game);
 		}
+		return total;
+	}
+
+	private int getScoreForTeam(String teamName, int total, Game game) {
+		if(game.getHomeTeam().equals(teamName)){
+            total += game.getHomeTeamScore();
+        }
+		if(game.getAwayTeam().equals(teamName)){
+            total += game.getAwayTeamScore();
+        }
 		return total;
 	}
 
