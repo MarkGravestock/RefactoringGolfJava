@@ -14,7 +14,7 @@ public class Game {
 		this.awayTeamScore = awayTeamScore;
 	}
 
-	int getScoreForTeam(String teamName) {
+	int getTeamScore(String teamName) {
 		int total = 0;
 		if(homeTeam.equals(teamName)){
 			total += homeTeamScore;

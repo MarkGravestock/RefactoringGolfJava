@@ -12,7 +12,7 @@ public class FootballScoreStats {
 		int total = 0;
 		Game[] played =  footballData.getAllPlayed();
 		for (Game game : played) {
-			total += game.getScoreForTeam(teamName);
+			total += game.getTeamScore(teamName);
 		}
 		return total;
 	}
