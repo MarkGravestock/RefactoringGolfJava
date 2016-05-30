@@ -1,5 +1,6 @@
+package com.markgravestock;
 
-public class FootballData implements GamelData {
+public class FootballData implements GameData {
 
 	@Override
 	public Game[] getAllPlayed() {

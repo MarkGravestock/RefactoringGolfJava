@@ -1,9 +1,10 @@
+package com.markgravestock;
 
 public class FootballScoreStats {
 
-	private GamelData footballData;
+	private GameData footballData;
 
-	public FootballScoreStats(GamelData footballData) {
+	public FootballScoreStats(GameData footballData) {
 		this.footballData = footballData;
 	}
 

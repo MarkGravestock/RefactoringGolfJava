@@ -1,5 +1,7 @@
 import static org.junit.Assert.*;
 
+import com.markgravestock.FootballData;
+import com.markgravestock.FootballScoreStats;
 import org.junit.Test;
 
 
