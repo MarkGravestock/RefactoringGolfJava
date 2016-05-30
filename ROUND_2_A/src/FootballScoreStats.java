@@ -1,9 +1,9 @@
 
 public class FootballScoreStats {
 
-	private FootballData footballData;
+	private GamelData footballData;
 
-	public FootballScoreStats(FootballData footballData) {
+	public FootballScoreStats(GamelData footballData) {
 		this.footballData = footballData;
 	}
 
