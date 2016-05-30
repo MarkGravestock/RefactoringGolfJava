@@ -1,7 +1,11 @@
 
 public class FootballScoreStats {
 
-	private FootballData footballData = new FootballData();
+	private FootballData footballData;
+
+	public FootballScoreStats() {
+		footballData = new FootballData();
+	}
 
 	public int teamTotal(String teamName) {
 		int total = 0;
