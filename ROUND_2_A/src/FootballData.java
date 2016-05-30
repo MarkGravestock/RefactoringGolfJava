@@ -1,6 +1,7 @@
 
-public class FootballData {
+public class FootballData implements GamelData {
 
+	@Override
 	public Game[] getAllPlayed() {
 		Game[] played = new Game[3];
 		played[0] = new Game("Liverpool", 2, "Everton", 0);
